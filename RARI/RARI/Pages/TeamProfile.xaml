@@ -27,13 +27,13 @@
                 Margin="10,-80,10,5" 
                 CornerRadius="100"
                 HorizontalOptions="CenterAndExpand">
-                <Image Source="https://cdn1.ozone.ru/s3/multimedia-t/c500/6050528297.jpg"
+                <Image Source="https://media.discordapp.net/attachments/775427856301686814/847531329544519680/445dc4051f1c5af772069fdc09cfe23c.jpg"
                    Aspect="AspectFill"
                    HeightRequest="350"/>
             </Frame>
 
             <Frame 
-               BackgroundColor="LightPink" 
+               BackgroundColor="#E9CAFF" 
                HeightRequest="35" 
                WidthRequest="250"
                HasShadow="False" 
@@ -42,7 +42,7 @@
                CornerRadius="120" 
                HorizontalOptions="CenterAndExpand">
                 <Label 
-                   Text="Название команды" 
+                   Text="Бригада" 
                    FontFamily = "Lobster"
                    HorizontalOptions="Center" 
                    VerticalOptions="Center"
@@ -52,38 +52,41 @@
             </Frame>
 
             <Label 
-               Text=" -  Мастер ООП" 
+               Text=" -  Язык программировния: C#" 
                HorizontalOptions="StartAndExpand"
                VerticalOptions="Center" 
                HorizontalTextAlignment="Start" 
                FontSize="Medium" 
-               TextColor="Black" 
+               TextColor="#D08CFF" 
                Margin="25,0,0,0"/>
             <Label 
-               Text=" -  Фронтенд король" 
+               Text=" -  Название проекта: ''Teamly''" 
                HorizontalOptions="StartAndExpand"
                VerticalOptions="Center" 
                HorizontalTextAlignment="Start" 
                FontSize="Medium" 
-               TextColor="Black" 
+               TextColor="#D08CFF" 
                Margin="25,0,0,0"/>
             <Label 
-               Text=" -  Гарет Бейл" 
+               Text=" -  Категория: Разработка ПО" 
+               TextColor="#D08CFF"
                HorizontalOptions="StartAndExpand"
                VerticalOptions="Center" 
                HorizontalTextAlignment="Start" 
                FontSize="Medium" 
-               TextColor="Black"
                Margin="25,0,0,0"/>
-            <Label 
-               Text="Я однокий мужчина, а Этот День Победы - Порохом пропах. Это праздник
-               С сединою на висках. Это радость Со слезами на глазах. День Победы! День Победы! День Победы!" 
-               HorizontalOptions="StartAndExpand"
-               VerticalOptions="Center" 
-               HorizontalTextAlignment="Start" 
-               FontSize="Medium" 
-               TextColor="Black"
-               Margin="15,20,0,0" />
+            <Frame Margin="15,20,15,0"
+                   BackgroundColor="#E9CAFF"
+                   CornerRadius="10" Padding="20,10">
+                <Label 
+                   Text="Команда молодых разработчиков и перспективных разработчиков ищет ответственного и трудолюбивого человека для разработки проекта по дисциплине ''ТРПО''." 
+                   HorizontalOptions="StartAndExpand"
+                   VerticalOptions="Center" 
+                   HorizontalTextAlignment="Start" 
+                   FontSize="Medium" 
+                   TextColor="Black"/>
+            </Frame>
+            
             <Grid VerticalOptions="EndAndExpand" BackgroundColor="#686262" Padding="0,0.3,0,0">
                 <Grid BackgroundColor="#FFFFFF">
 

@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RARI.Pages.ChangeProfilePage">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#FFFFFF">
+            <!-- Place new controls here -->
+            <ScrollView Margin="0,0,0,0">
+                <StackLayout>
+                    <Frame 
+                       HeightRequest="200" 
+                       WidthRequest="200" 
+                       BackgroundColor="White"
+                       HasShadow="True" 
+                       Padding="0" 
+                       Margin="10,10,10,5" 
+                       CornerRadius="100"
+                       HorizontalOptions="CenterAndExpand">
+                        <Image   
+                           Source="https://cdn1.ozone.ru/s3/multimedia-t/c500/6050528297.jpg"
+                           Aspect="AspectFill"
+                           HeightRequest="350"/>
+                    </Frame>
+
+                    <Button   Text="Сменить аватар"
+                          BackgroundColor="#E9CAFF"
+                          WidthRequest="150"
+                          HeightRequest="40"
+                          Margin="120,0,120,10"
+                          FontFamily = "Lobster"
+                          TextColor="Black"
+                          FontSize="Small"
+                          CornerRadius="20"/>
+
+                    <Label    Text="Имя"  
+                          FontSize="Small" 
+                          Margin="10,0,0,0"/>
+                    <StackLayout>
+                        <Frame
+                          WidthRequest="350"
+                          HorizontalOptions="StartAndExpand"
+                          CornerRadius="10"
+                          Padding="0,0"
+                          BackgroundColor="#E9CAFF"
+                          Margin="20,0,20,5">
+                            <Entry 
+                               HorizontalOptions="Fill" 
+                               VerticalOptions="Fill" 
+                               BackgroundColor="#E9CAFF" 
+                               FontSize="Small"
+                               ClearButtonVisibility="WhileEditing"/>
+                        </Frame>
+                    </StackLayout>
+                    <Label     Text="Фамилия"  
+                           FontSize="Small" 
+                           Margin="10,0,0,0"/>
+                    <Frame
+                           WidthRequest="350"
+                           HorizontalOptions="StartAndExpand"
+                           CornerRadius="10"
+                           Padding="0,0"
+                           BackgroundColor="#E9CAFF"
+                           Margin="20,0,20,5">
+                        <Entry 
+                           HorizontalOptions="Fill" 
+                           VerticalOptions="Fill" 
+                           BackgroundColor="#E9CAFF" 
+                           FontSize="Small"
+                           ClearButtonVisibility="WhileEditing">
+                        </Entry>
+                    </Frame>
+                    <Label     Text="Никнейм"  
+                           FontSize="Small" 
+                           Margin="10,0,0,0"/>
+                    <Frame
+                           WidthRequest="350"
+                           HorizontalOptions="StartAndExpand"
+                           CornerRadius="10"
+                           Padding="0,0"
+                           BackgroundColor="#E9CAFF"
+                           Margin="20,0,20,5">
+                        <Entry 
+                           HorizontalOptions="Fill" 
+                           VerticalOptions="Fill" 
+                           BackgroundColor="#E9CAFF" 
+                           FontSize="Small"
+                           ClearButtonVisibility="WhileEditing">
+                        </Entry>
+                    </Frame>
+                    <Label     Text="Город"  
+                           FontSize="Small" 
+                           Margin="10,0,0,0"/>
+                    <Frame
+                           WidthRequest="350"
+                           HorizontalOptions="StartAndExpand"
+                           CornerRadius="10"
+                           Padding="0,0"
+                           BackgroundColor="#E9CAFF"
+                           Margin="20,0,20,5">
+                        <Entry 
+                           HorizontalOptions="Fill" 
+                           VerticalOptions="Fill" 
+                           BackgroundColor="#E9CAFF" 
+                           FontSize="Small"
+                           ClearButtonVisibility="WhileEditing">
+                        </Entry>
+                    </Frame>
+                    <Label    Text="Языки программирования"  
+                          FontSize="Small" 
+                          Margin="10,0,0,0"/>
+                    <Frame
+                          WidthRequest="350"
+                          HorizontalOptions="StartAndExpand"
+                          CornerRadius="10"
+                          Padding="0,0"
+                          BackgroundColor="#E9CAFF"
+                          Margin="20,0,20,5">
+                        <Grid       WidthRequest="350"
+                                HorizontalOptions="Center"
+                                BackgroundColor="#E9CAFF" 
+                                Padding="0,5,0,0">
+
+                            <StackLayout>
+                                <CheckBox x:Name="Langs1"/>
+                                <CheckBox x:Name="Langs2"/>
+                                <CheckBox x:Name="Langs3"/>
+                                <CheckBox x:Name="Langs4"/>
+                            </StackLayout>
+                            <StackLayout Grid.Column="0" 
+                                        Margin="40,0,0,0" >
+                                <Label Text="C#" FontSize="Medium" Margin="0,2,0,0"/>
+                                <Label Text="C/C++" FontSize="Medium" Margin="0,8,0,0"/>
+                                <Label Text="Java" FontSize="Medium" Margin="0,8,0,0"/>
+                                <Label Text="PHP" FontSize="Medium" Margin="0,8,0,0"/>
+                            </StackLayout>
+                        </Grid>
+                    </Frame>
+
+                    <Label     Text="Описание"  
+                           FontSize="Small" 
+                           Margin="10,0,0,0"/>
+
+                    <Frame 
+                           BackgroundColor="#E9CAFF"
+                           Margin="20,0,40,0"
+                           CornerRadius="10" 
+                           Padding="0">
+                        <Editor  
+                           Text="Наша команда состоит из 4 красавчиков" 
+                           AutoSize="TextChanges" 
+                           BackgroundColor="#E9CAFF">
+                        </Editor>
+                    </Frame>
+
+                    <Button   Text="Сохранить"
+                          BackgroundColor="#E9CAFF"
+                          WidthRequest="150"
+                          HeightRequest="40"
+                          Margin="120,0,120,10"
+                          FontFamily = "Lobster"
+                          TextColor="Black"
+                          FontSize="Small"
+                          CornerRadius="20"/>
+                </StackLayout>
+            </ScrollView>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

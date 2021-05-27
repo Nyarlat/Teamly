@@ -21,6 +21,7 @@ namespace RARI.PageModels
             _viewLookup = new Dictionary<Type, Type>();
 
             // Создание страниц и моделей страниц
+            Register<ChatPageModel, ChatPage>();
             Register<DashboardModel, DashboardPage>();
             Register<LoginPageModel, LoginPage>();
             Register<MessengerPageModel, MessengerPage>();
@@ -29,6 +30,9 @@ namespace RARI.PageModels
             Register<RegPage2Model, RegPage2>();
             Register<SearchPageModel, SearchPage>();
             Register<TeamProfilePageModel, TeamProfile>();
+            Register<HelpPageModel, HelpPage>();
+            Register<ChangePasswordPageModel, ChangePasswordPage>();
+            Register<ChangeProfilePageModel, ChangeProfilePage>();
 
 
             // Сервисы регистрации ( сервисы создаются с помощью паттерны "Одиночка" по умолчанию)

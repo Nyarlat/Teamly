@@ -5,47 +5,55 @@
              x:Class="RARI.Pages.MessengerPage">
     <ContentPage.Content>
         <StackLayout  Padding="0">
-            <Frame WidthRequest="200" Padding="0" CornerRadius="24" Margin="70,8,70,0" BorderColor="#181515" >
-                <Entry Placeholder="Поиск по чатам" 
-                   WidthRequest="200" HorizontalOptions="Center" VerticalOptions="FillAndExpand" HorizontalTextAlignment="Center" Margin="15,0" >
-                </Entry>
+
+            <Frame WidthRequest="100"
+                   HeightRequest="30">
+                <SearchBar
+                    Placeholder="Поиск по чатам" />
             </Frame>
-            <Grid >
+
+            <Grid>
                 <StackLayout  
-                        HorizontalOptions="StartAndExpand" 
-                        Margin="45,5,0,0"
-                        WidthRequest="150" 
-                        VerticalOptions="Fill"  >
+                            HorizontalOptions="StartAndExpand" 
+                            Margin="45,5,0,0"
+                            WidthRequest="150" 
+                            VerticalOptions="Fill"  >
                     <Button   
-                        HorizontalOptions="FillAndExpand"
-                        HeightRequest="40"
-                        CornerRadius="20" 
-                        Text="Люди" />
+                            HorizontalOptions="FillAndExpand"
+                            HeightRequest="40"
+                            BackgroundColor="#E9CAFF"
+                            CornerRadius="20" 
+                            Text="Люди" />
                 </StackLayout>
 
-                <FlexLayout>
-                    <ListView ItemsSource="{Binding  ToChatDetails}" Margin="0,55,0,0" HeightRequest="350">
-                        <ListView.ItemTemplate>
-                            <DataTemplate>
-                                <TextCell Detail="{Binding SearchDetails}" Text="{Binding SearchName}"/>
-                            </DataTemplate>
-                        </ListView.ItemTemplate>
-                    </ListView>
-                </FlexLayout>
-
                 <StackLayout 
-                VerticalOptions="Start" 
-                HorizontalOptions="EndAndExpand" 
-                Margin="0,5,45,0"
-                WidthRequest="150" >
+                        VerticalOptions="Start" 
+                        HorizontalOptions="EndAndExpand" 
+                        Margin="0,5,45,0"
+                        WidthRequest="150" >
                     <Button
-                    HorizontalOptions="FillAndExpand"
-                    HeightRequest="40" 
-                    CornerRadius="20" 
-                    Text="Команды"/>
+                            HorizontalOptions="FillAndExpand"
+                            HeightRequest="40" 
+                            BackgroundColor="#E9CAFF"
+                            CornerRadius="20" 
+                            Text="Команды"/>
                 </StackLayout>
             </Grid>
             
+            <Button WidthRequest="100"
+                    Command="{Binding GoToChat}"/>
+            
+            <ListView ItemsSource="{Binding ToChatDetails}"
+                                  Margin="0,55,0,0"
+                                  HeightRequest="350"
+                                  ItemTapped="ListView_ItemTapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate >
+                        <TextCell Detail="{Binding SearchDetails}" Text="{Binding SearchName}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
             <Grid VerticalOptions="EndAndExpand" BackgroundColor="#686262" Padding="0,0.3,0,0">
                 <Grid BackgroundColor="#FFFFFF">
                     <StackLayout BackgroundColor="#FFFFFF" WidthRequest="70" Margin="20,5,320,5" >

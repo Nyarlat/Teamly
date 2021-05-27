@@ -5,35 +5,14 @@
              x:Class="RARI.Pages.SearchPage">
     <ContentPage.Content>
         <StackLayout>
-            <Grid WidthRequest="130" 
-                  Padding="0"  
-                  Margin="0,8,0,0">
-                <StackLayout>
-                    <Entry 
-                        WidthRequest="250" 
-                        HorizontalOptions="Center" 
-                        VerticalOptions="FillAndExpand" 
-                        HorizontalTextAlignment="Center"
-                        Margin="3,0,5,0" 
-                        Placeholder="Поиск по имени" 
-                        IsEnabled="True" >
-                    </Entry>
-                </StackLayout>
-                <StackLayout>
-                    <ImageButton 
-                        Aspect="AspectFill"
-                        BackgroundColor="White" 
-                        BorderWidth="0"
-                        HorizontalOptions="EndAndExpand" 
-                        VerticalOptions="CenterAndExpand"
-                        CornerRadius="25"
-                        WidthRequest="40"
-                        HeightRequest="40"
-                        Source="https://image.flaticon.com/icons/png/512/149/149309.png"
-                        Padding="7" Margin="220,0,43,0"/>
-                </StackLayout>
-            </Grid>
-            <ListView Margin="0,0,0,-150" 
+            <Frame WidthRequest="100"
+                   HeightRequest="30">
+                <SearchBar
+                    Placeholder="Поиск по имени" />
+            </Frame>
+
+            
+            <ListView Margin="0,0,0,-150"                     
                       x:Name="ListSearch" 
                       ItemSelected="ListSearch_ItemSelected" >
             </ListView>

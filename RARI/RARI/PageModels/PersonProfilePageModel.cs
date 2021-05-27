@@ -33,6 +33,7 @@ namespace RARI.PageModels
             GoToMessenger = new Command(GoToMessengerAction);
             GoToTeam = new Command(GoToTeamAction);
             GoToPerson = new Command(GoToPersonAction);
+            GoToSettings = new Command(GoToSettingsAction);
         }
 
         private ICommand _goToSearch;
@@ -81,6 +82,18 @@ namespace RARI.PageModels
         private async void GoToTeamAction(object obj)
         {
             await _navigationService.NavigateToAsync<TeamProfilePageModel>();
+        }
+
+        private ICommand _goToSettings;
+        public ICommand GoToSettings
+        {
+            get => _goToSettings;
+            set => SetProperty(ref _goToSettings, value);
+        }
+
+        private async void GoToSettingsAction(object obj)
+        {
+            await _navigationService.NavigateToAsync<SettingPageModel>();
         }
     }
 }

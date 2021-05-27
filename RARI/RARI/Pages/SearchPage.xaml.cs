@@ -43,7 +43,7 @@ namespace RARI.Pages
                 }
                 else
                 {
-                    code += buf;
+                    code = "Язык программирования: " + buf;
                 }
                 SetList(code, city, category, sex);
             }
@@ -57,7 +57,7 @@ namespace RARI.Pages
                 }
                 else
                 {
-                    city += buf;
+                    city = "Город: " + buf;
                 }
                 SetList(code, city, category, sex);
             }
@@ -71,7 +71,7 @@ namespace RARI.Pages
                 }
                 else
                 {
-                    category += buf;
+                    category = "Категория: " + buf;
                 }
                 SetList(code, city, category, sex);
             }
@@ -85,7 +85,7 @@ namespace RARI.Pages
                 }
                 else
                 {
-                    sex += buf;
+                    sex = "Пол: " + buf;
                 }
                 SetList(code, city, category, sex);
             }

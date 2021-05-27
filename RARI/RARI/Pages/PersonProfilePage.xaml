@@ -9,6 +9,7 @@
             <!-- Place new controls here -->
             <ImageButton 
                 BackgroundColor="LightSkyBlue"
+                Command="{Binding GoToSettings}"
                 Aspect="AspectFill"
                 HorizontalOptions="EndAndExpand" 
                 VerticalOptions="StartAndExpand"
@@ -28,12 +29,12 @@
                 Margin="10,-80,10,5" 
                 CornerRadius="100"
                 HorizontalOptions="CenterAndExpand">
-                <Image Source="https://cdn1.ozone.ru/s3/multimedia-t/c500/6050528297.jpg"
+                <Image Source="https://images-ext-1.discordapp.net/external/Om3xoJnODKDx0RiTsEnUmsEnNSvTVajFcViKQE84QcE/%3Fsize%3D1200x1600%26quality%3D96%26sign%3D2ca9fcff9aaf717cc06a06e869263dac%26type%3Dalbum/https/sun9-48.userapi.com/impg/cbCY6QqOUxq2bpgFCnvynuy1kU8HW5MQu8mFKQ/GoO5F3FUocg.jpg"
                    Aspect="AspectFill"
                    HeightRequest="350"/>
             </Frame>
 
-            <Frame BackgroundColor="LightPink" 
+            <Frame BackgroundColor="#E9CAFF" 
                HeightRequest="35" 
                WidthRequest="180"
                HasShadow="False" 
@@ -41,7 +42,7 @@
                Margin="10" 
                CornerRadius="120" 
                HorizontalOptions="CenterAndExpand">
-                <Label Text="Имя Фамилия" 
+                <Label Text="KashapOnFire" 
                    FontFamily = "Lobster"
                    HorizontalOptions="Center" 
                    VerticalOptions="Center"
@@ -50,36 +51,39 @@
                    FontSize="Large"/>
             </Frame>
 
-            <Label Text=" -  Мастер ООП" 
+            <Label Text=" -  Город: Уфа" 
                x:Name="asdf"
                HorizontalOptions="StartAndExpand"
                VerticalOptions="Center" 
                HorizontalTextAlignment="Start" 
                FontSize="Medium" 
-               TextColor="Black" 
+               TextColor="#D08CFF" 
                Margin="25,0,0,0"/>
-            <Label Text=" -  Фронтенд король" 
+            <Label Text=" -  Язык программирования: С#" 
                HorizontalOptions="StartAndExpand"
                VerticalOptions="Center" 
                HorizontalTextAlignment="Start" 
                FontSize="Medium" 
-               TextColor="Black" 
+               TextColor="#D08CFF" 
                Margin="25,0,0,0"/>
-            <Label Text=" -  Гарет Бейл" 
+            <Label Text=" -  Категория: Разработка ПО" 
                HorizontalOptions="StartAndExpand"
                VerticalOptions="Center" 
                HorizontalTextAlignment="Start" 
                FontSize="Medium" 
-               TextColor="Black"
+               TextColor="#D08CFF"
                Margin="25,0,0,0"/>
-            <Label Text="Я однокий мужчина, а Этот День Победы - Порохом пропах. Это праздник
-               С сединою на висках. Это радость Со слезами на глазах. День Победы! День Победы! День Победы!" 
+            
+            <Frame Margin="15,15,15,0"
+                   BackgroundColor="#E9CAFF"
+                   CornerRadius="10" Padding="20,10">
+                <Label Text="Меня зовут Руслан. Я учусь на направлении ''Математическое обеспечение и администрирование информационных систем'' в УГАТУ. Ищу единомышленников для разработки проекта по предмету ''ТРПО''." 
                HorizontalOptions="StartAndExpand"
                VerticalOptions="Center" 
                HorizontalTextAlignment="Start" 
                FontSize="Medium" 
-               TextColor="Black"
-               Margin="15,20,0,0" />
+               TextColor="Black"/>
+            </Frame>
 
 
             <Grid VerticalOptions="EndAndExpand" BackgroundColor="#686262" Padding="0,0.3,0,0">

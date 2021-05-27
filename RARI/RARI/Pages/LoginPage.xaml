@@ -25,7 +25,7 @@
                         Text="{Binding Username}"
                         MaxLength="20"
                         ClearButtonVisibility="WhileEditing"
-                        Placeholder="Login" />
+                        Placeholder="Mail" />
             </Frame>
 
 

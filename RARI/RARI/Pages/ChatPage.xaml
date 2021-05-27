@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             NavigationPage.HasNavigationBar="False"
+             x:Class="RARI.Pages.ChatPage">
+    
+    <Grid RowDefinitions="*, auto" x:Name="grid" BackgroundColor="White">
+        <ListView ItemsSource="{Binding MessageList}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid RowDefinitions ="auto, auto">
+                            <Frame BackgroundColor="Gray"
+                             Padding="10"
+                             HasShadow="True"
+                             Margin="10,10,80,10">
+                                <Label Text="{Binding Text}"/>
+                            </Frame>
+                            <Label Text="{Binding UserName}"/>
+                            <Label Text="{Binding Message}"/>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <StackLayout x:Name="stack_layout" Grid.Row ="1" Padding ="10,0,10,23" VerticalOptions="StartAndExpand" Margin="0,0,0,0" HorizontalOptions="EndAndExpand" 
+                     WidthRequest="350">
+        </StackLayout>
+
+        <StackLayout Grid.Row="1" Padding="10,0,0,13" VerticalOptions="EndAndExpand"  HorizontalOptions="StartAndExpand">
+            <Frame  Padding="20,0" HasShadow="False" CornerRadius="20" BorderColor="#E9CAFF"
+                    BackgroundColor="#E9CAFF"
+                    WidthRequest="290">
+                <Entry x:Name="Message_Enty"
+                           Text=""
+                           BackgroundColor="#E9CAFF"
+                           Placeholder =" Введите сообщение"
+                           WidthRequest="300" HorizontalTextAlignment="Start">
+                </Entry>
+            </Frame>
+        </StackLayout>
+        <StackLayout Grid.Row ="1"
+                         Padding ="0" 
+                         HorizontalOptions="EndAndExpand"
+                         VerticalOptions="EndAndExpand">
+
+            <ImageButton Source="https://cdn.discordapp.com/attachments/775427856301686814/847513755327397928/d1a56aee5ccfd463.png" 
+                         HeightRequest="65" WidthRequest="65" Padding="0,0,10,10" BackgroundColor= "White" 
+                         Clicked="ImageButton_Clicked">
+
+            </ImageButton>
+        </StackLayout>
+
+
+    </Grid>
+</ContentPage>

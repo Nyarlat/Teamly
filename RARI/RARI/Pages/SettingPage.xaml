@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RARI.Pages.SettingPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label
+                Text="Настройки" 
+                FontSize="30" 
+                HorizontalOptions="CenterAndExpand" Margin="0,15,0,0" >
+            </Label>
+            <Grid >
+                <FlexLayout>
+                    <ListView ItemsSource="{Binding  MySettings}" 
+                              Margin="0,15,0,0"
+                              RowHeight="60"
+                              ItemSelected="ListView_ItemSelected">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <TextCell Text="{Binding HomeName}" TextColor="Black" />
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </FlexLayout>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -18,5 +18,10 @@ namespace RARI.Pages
             InitializeComponent();
             BindingContext = new ToChatViewModel();
         }
+
+        private void ListView_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            DisplayActionSheet("Категория", "Отмена", "Очистить", "Разработка игр ", "Разработка ПО ", "Создание сайтов ");
+        }
     }
 }

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RARI.Pages.HelpPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Справочный центр"
+                    HorizontalOptions="CenterAndExpand" 
+                   FontSize="Large" Margin="0,5,0,0" />
+            <Label Text="Почта для связи с разработчиками: " 
+                   FontSize="Medium" 
+                   TextColor="#000000" Margin="10,5,0,0">
+            </Label>
+            <Label Text="andrewrush@mpo14.ru"
+                   TextType="Html" 
+                   Margin="11,0,0,0"></Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
