@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             NavigationPage.HasNavigationBar="False"
+             x:Class="RARI.RegPage2">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Image 
+                Source="https://media.discordapp.net/attachments/775427856301686814/846038586008272906/96580c1ce798307e.png"/>
+
+
+            <Frame WidthRequest="260"
+                   HorizontalOptions="Center"
+                   CornerRadius="10"
+                   Padding="20,0"
+                   BackgroundColor="#E9CAFF"
+                   Margin="0,0,0,0">
+                <Entry 
+                        x:Name="FirstName"
+                        WidthRequest="300"
+                        BackgroundColor="#E9CAFF"
+                        HorizontalOptions="CenterAndExpand"
+                        ClearButtonVisibility="WhileEditing"
+                        Placeholder="Введите фамилию"
+                        MaxLength="100" />
+            </Frame>
+
+            <Frame WidthRequest="260"
+                   HorizontalOptions="Center"
+                   CornerRadius="10"
+                   Padding="20,0"
+                   BackgroundColor="#E9CAFF"
+                   Margin="0,5,0,0">
+                <Entry 
+                        x:Name="SecondName"
+                        WidthRequest="300"
+                        BackgroundColor="#E9CAFF"
+                        HorizontalOptions="CenterAndExpand"
+                        ClearButtonVisibility="WhileEditing"
+                        Placeholder="Введите имя"
+                        MaxLength="100" />
+            </Frame>
+
+
+            <Frame WidthRequest="260"
+                   HorizontalOptions="Center"
+                   CornerRadius="10"
+                   Padding="20,0"
+                   BackgroundColor="#E9CAFF"
+                   Margin="0,5,0,0">
+                <Entry 
+                        x:Name="City"
+                        WidthRequest="300"
+                        BackgroundColor="#E9CAFF"
+                        HorizontalOptions="CenterAndExpand"
+                        ClearButtonVisibility="WhileEditing"
+                        Placeholder="Введите город"
+                        MaxLength="100" />
+            </Frame>
+
+
+            <Label Text="Выберете языки программирования:" FontSize="15" Margin="55,5,0,0"/>
+            
+            <Grid  WidthRequest="290"
+                   HorizontalOptions="Center"   
+                   BackgroundColor="#E9CAFF" Padding="10,5,0,0">
+
+                <StackLayout>
+                    <CheckBox x:Name="Langs1"/>
+                    <CheckBox x:Name="Langs2"/>
+                    <CheckBox x:Name="Langs3"/>
+                    <CheckBox x:Name="Langs4"/>
+                </StackLayout>
+                <StackLayout Grid.Column="0" Margin="40,0,0,0" >
+                    <Label Text="C#" FontSize="Medium" Margin="0,2,0,0"/>
+                    <Label Text="C/C++" FontSize="Medium" Margin="0,8,0,0"/>
+                    <Label Text="Java" FontSize="Medium" Margin="0,8,0,0"/>
+                    <Label Text="PHP" FontSize="Medium" Margin="0,8,0,0"/>
+                </StackLayout>
+
+
+            </Grid>
+
+
+            <Button
+                x:Name="bReg2"
+                Command="{Binding GoToPerson}"
+                WidthRequest="300"
+                Margin="0,20,0,0"
+                BackgroundColor="#E9CAFF"
+                Text="Регистрация"
+                CornerRadius="20"
+                HorizontalOptions="CenterAndExpand"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

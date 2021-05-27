@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             NavigationPage.HasNavigationBar="False"
+             xmlns:pages="clr-namespace:RARI.Pages"
+             x:Class="RARI.Pages.PersonProfile">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#FFFFFF">
+            <!-- Place new controls here -->
+            <ImageButton 
+                BackgroundColor="LightSkyBlue"
+                Aspect="AspectFill"
+                HorizontalOptions="EndAndExpand" 
+                VerticalOptions="StartAndExpand"
+                Margin="0,5,10,0" 
+                CornerRadius="20"
+                WidthRequest="40"
+                HeightRequest="40"
+                Source="https://img2.freepng.ru/20180616/kgj/kisspng-computer-icons-encapsulated-postscript-clip-art-gear-icon-5b2520fdd66607.4981718615291599338782.jpg"/>
+
+
+            <Frame 
+                HeightRequest="200" 
+                WidthRequest="200" 
+                BackgroundColor="White"
+                HasShadow="True" 
+                Padding="0" 
+                Margin="10,-80,10,5" 
+                CornerRadius="100"
+                HorizontalOptions="CenterAndExpand">
+                <Image Source="https://cdn1.ozone.ru/s3/multimedia-t/c500/6050528297.jpg"
+                   Aspect="AspectFill"
+                   HeightRequest="350"/>
+            </Frame>
+
+            <Frame BackgroundColor="LightPink" 
+               HeightRequest="35" 
+               WidthRequest="180"
+               HasShadow="False" 
+               Padding="10" 
+               Margin="10" 
+               CornerRadius="120" 
+               HorizontalOptions="CenterAndExpand">
+                <Label Text="Имя Фамилия" 
+                   FontFamily = "Lobster"
+                   HorizontalOptions="Center" 
+                   VerticalOptions="Center"
+                   TextColor="Black"
+                   HorizontalTextAlignment="Start" 
+                   FontSize="Large"/>
+            </Frame>
+
+            <Label Text=" -  Мастер ООП" 
+               x:Name="asdf"
+               HorizontalOptions="StartAndExpand"
+               VerticalOptions="Center" 
+               HorizontalTextAlignment="Start" 
+               FontSize="Medium" 
+               TextColor="Black" 
+               Margin="25,0,0,0"/>
+            <Label Text=" -  Фронтенд король" 
+               HorizontalOptions="StartAndExpand"
+               VerticalOptions="Center" 
+               HorizontalTextAlignment="Start" 
+               FontSize="Medium" 
+               TextColor="Black" 
+               Margin="25,0,0,0"/>
+            <Label Text=" -  Гарет Бейл" 
+               HorizontalOptions="StartAndExpand"
+               VerticalOptions="Center" 
+               HorizontalTextAlignment="Start" 
+               FontSize="Medium" 
+               TextColor="Black"
+               Margin="25,0,0,0"/>
+            <Label Text="Я однокий мужчина, а Этот День Победы - Порохом пропах. Это праздник
+               С сединою на висках. Это радость Со слезами на глазах. День Победы! День Победы! День Победы!" 
+               HorizontalOptions="StartAndExpand"
+               VerticalOptions="Center" 
+               HorizontalTextAlignment="Start" 
+               FontSize="Medium" 
+               TextColor="Black"
+               Margin="15,20,0,0" />
+
+
+            <Grid VerticalOptions="EndAndExpand" BackgroundColor="#686262" Padding="0,0.3,0,0">
+                <Grid BackgroundColor="#FFFFFF">
+                    <StackLayout BackgroundColor="#FFFFFF" WidthRequest="70" Margin="20,5,320,5"  >
+                        <ImageButton 
+                            x:Name="Search"
+                            Command="{Binding GoToSearch}"
+                            Aspect="AspectFill"
+                            BackgroundColor="White" 
+                            BorderWidth="0"
+                            HorizontalOptions="Center" 
+                            VerticalOptions="CenterAndExpand"
+                            CornerRadius="25"
+                            WidthRequest="60"
+                            HeightRequest="60"
+                            Source="https://image.flaticon.com/icons/png/512/149/149309.png"
+                            Padding="7"/>
+                    </StackLayout>
+                    <StackLayout WidthRequest="70" BackgroundColor="#FFFFFF" Margin="120,5,220,5" VerticalOptions="Start">
+                        <ImageButton 
+                            Command="{Binding GoToMessenger}"
+                            x:Name="Message"
+                            Aspect="AspectFill"
+                            BackgroundColor="White"
+                            BorderWidth="0"
+                            HorizontalOptions="Center" 
+                            VerticalOptions="CenterAndExpand"
+                            CornerRadius="25"
+                            WidthRequest="60"
+                            HeightRequest="60"
+                            Source="https://cdn.discordapp.com/attachments/682233200101032007/845330973679812638/2.png"
+                            Padding="7"/>   
+                    </StackLayout>
+                    <StackLayout Margin="220,5,120,5" BackgroundColor="#FFFFFF">
+                        <ImageButton 
+                            Aspect="AspectFill"
+                            BackgroundColor="White" 
+                            BorderWidth="0"
+                            HorizontalOptions="Center" 
+                            VerticalOptions="CenterAndExpand"
+                            CornerRadius="25"
+                            WidthRequest="60"
+                            HeightRequest="60"
+                        Source="https://cdn.discordapp.com/attachments/682233200101032007/845324961027325962/8THztG7Avzc.png" 
+                        Padding="7,30"/>
+                    </StackLayout>
+                    <StackLayout Margin="320,5,20,5" BackgroundColor="#FFFFFF">
+                        <ImageButton 
+                            Command="{Binding GoToTeam}"
+                            Aspect="AspectFill"
+                            x:Name="CreateComand"
+                            BackgroundColor="White" 
+                            BorderWidth="0"
+                            HorizontalOptions="EndAndExpand" 
+                            VerticalOptions="CenterAndExpand"
+                            CornerRadius="25"
+                            WidthRequest="60"
+                            HeightRequest="60"
+                            Source="https://cdn.discordapp.com/attachments/775427856301686814/841350625132544030/unknown.png">
+                        </ImageButton>
+                        
+
+                    </StackLayout>
+                </Grid>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

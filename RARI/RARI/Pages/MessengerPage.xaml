@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             NavigationPage.HasNavigationBar="False"
+             x:Class="RARI.Pages.MessengerPage">
+    <ContentPage.Content>
+        <StackLayout  Padding="0">
+            <Frame WidthRequest="200" Padding="0" CornerRadius="24" Margin="70,8,70,0" BorderColor="#181515" >
+                <Entry Placeholder="Поиск по чатам" 
+                   WidthRequest="200" HorizontalOptions="Center" VerticalOptions="FillAndExpand" HorizontalTextAlignment="Center" Margin="15,0" >
+                </Entry>
+            </Frame>
+            <Grid >
+                <StackLayout  
+                        HorizontalOptions="StartAndExpand" 
+                        Margin="45,5,0,0"
+                        WidthRequest="150" 
+                        VerticalOptions="Fill"  >
+                    <Button   
+                        HorizontalOptions="FillAndExpand"
+                        HeightRequest="40"
+                        CornerRadius="20" 
+                        Text="Люди" />
+                </StackLayout>
+
+                <FlexLayout>
+                    <ListView ItemsSource="{Binding  ToChatDetails}" Margin="0,55,0,0" HeightRequest="350">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <TextCell Detail="{Binding SearchDetails}" Text="{Binding SearchName}"/>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </FlexLayout>
+
+                <StackLayout 
+                VerticalOptions="Start" 
+                HorizontalOptions="EndAndExpand" 
+                Margin="0,5,45,0"
+                WidthRequest="150" >
+                    <Button
+                    HorizontalOptions="FillAndExpand"
+                    HeightRequest="40" 
+                    CornerRadius="20" 
+                    Text="Команды"/>
+                </StackLayout>
+            </Grid>
+            
+            <Grid VerticalOptions="EndAndExpand" BackgroundColor="#686262" Padding="0,0.3,0,0">
+                <Grid BackgroundColor="#FFFFFF">
+                    <StackLayout BackgroundColor="#FFFFFF" WidthRequest="70" Margin="20,5,320,5" >
+                        <ImageButton 
+                            x:Name="FromMessagerToSearch"
+                            Command="{Binding GoToSearch}"
+                            Aspect="AspectFill"
+                            BackgroundColor="White" 
+                            BorderWidth="0"
+                            HorizontalOptions="Center" 
+                            VerticalOptions="CenterAndExpand"
+                            CornerRadius="25"
+                            WidthRequest="60"
+                            HeightRequest="60"
+                            Source="https://image.flaticon.com/icons/png/512/149/149309.png"
+                            Padding="7"/>   
+                    </StackLayout>
+                    <StackLayout WidthRequest="70" BackgroundColor="#FFFFFF" Margin="120,5,220,5" VerticalOptions="Start">
+                        <ImageButton 
+                            Aspect="AspectFill"
+                            Command="{Binding GoToMessenger}"
+                            BackgroundColor="White"
+                            BorderWidth="0"
+                            HorizontalOptions="Center" 
+                            VerticalOptions="CenterAndExpand"
+                            CornerRadius="25"
+                            WidthRequest="60"
+                            HeightRequest="60"
+                            Source="https://cdn.discordapp.com/attachments/682233200101032007/845329447497367622/92234b8f1ec42d41.png"
+                            Padding="7"/>
+                    </StackLayout>
+                    <StackLayout Margin="220,5,120,5" BackgroundColor="#FFFFFF">
+                        <ImageButton 
+                            x:Name="FromMessageToProfile"
+                            Command="{Binding GoToPerson}"
+                            Aspect="AspectFill"
+                            BackgroundColor="White" 
+                            BorderWidth="0"
+                            HorizontalOptions="Center" 
+                            VerticalOptions="CenterAndExpand"
+                            CornerRadius="25"
+                            WidthRequest="60"
+                            HeightRequest="60"
+                        Source="https://forum.taucetistation.org/uploads/default/original/2X/4/42b02f36044eb875535565e5866a38468cd29809.png" Padding="7,30"/>
+                    </StackLayout>
+                    <StackLayout Margin="320,5,20,5" BackgroundColor="#FFFFFF">
+                        <ImageButton 
+                            Command="{Binding GoToTeam}"
+                            Aspect="AspectFill"
+                            x:Name="FromMessageToComand"
+                            BackgroundColor="White" 
+                            BorderWidth="0"
+                            HorizontalOptions="EndAndExpand" 
+                            VerticalOptions="CenterAndExpand"
+                            CornerRadius="25"
+                            WidthRequest="60"
+                            HeightRequest="60"
+                            Source="https://cdn.discordapp.com/attachments/775427856301686814/841350625132544030/unknown.png"/>
+                    </StackLayout>
+                </Grid>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

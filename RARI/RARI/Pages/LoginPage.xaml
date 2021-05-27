@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             NavigationPage.HasNavigationBar="False"
+             x:Class="RARI.Pages.LoginPage"
+             Title="Login">
+    <ContentPage.Content>
+        
+        <StackLayout>
+            <Image  HeightRequest="180"
+                WidthRequest="180"
+                Margin="20,40,20,20"           
+                HorizontalOptions="CenterAndExpand"
+                Source="https://media.discordapp.net/attachments/775427856301686814/846038289743478834/2.png">
+            </Image>
+
+            <Frame WidthRequest="260"
+               HorizontalOptions="Center"
+               CornerRadius="10"
+               Padding="20,0"
+               BackgroundColor="#E9CAFF"
+               Margin="20,20,20,5">
+                <Entry 
+                        x:Name="EntryLogin" 
+                        Text="{Binding Username}"
+                        MaxLength="20"
+                        ClearButtonVisibility="WhileEditing"
+                        Placeholder="Login" />
+            </Frame>
+
+
+            <Frame WidthRequest="260"
+               HorizontalOptions="Center"
+               CornerRadius="10"
+               Padding="20,0"
+               BackgroundColor="#E9CAFF">
+                <Entry 
+                        x:Name="EntryPass"
+                        Text="{Binding Password}"
+                        IsPassword="True"
+                        ClearButtonVisibility="WhileEditing"
+                        Placeholder="Password"
+                        MaxLength="100"/>
+            </Frame>
+
+            <Button
+            x:Name="bEntry"
+            Command="{Binding LoginCommand}"
+            WidthRequest="300"
+            Margin="20"
+            BackgroundColor="#E9CAFF"
+            Text="Войти"
+            CornerRadius="20"
+            HorizontalOptions="CenterAndExpand"/>
+
+
+            <Label
+            Text="Впервые в Teamly?"
+            WidthRequest="300"
+            Margin="0,20,0,0"
+            HorizontalOptions="CenterAndExpand"
+            FontSize="16"/>
+
+            <Button
+            x:Name="bNewReg"
+            Command="{Binding RegCommand}"
+            WidthRequest="300"
+            Margin="0,5,0,0"
+            BackgroundColor="#E9CAFF"
+            Text="Зарегистрироваться"
+            CornerRadius="20"
+            HorizontalOptions="CenterAndExpand"/>
+
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>
