@@ -33,6 +33,7 @@ namespace RARI.PageModels
             Register<HelpPageModel, HelpPage>();
             Register<ChangePasswordPageModel, ChangePasswordPage>();
             Register<ChangeProfilePageModel, ChangeProfilePage>();
+            Register<CreateTeamPageModel, CreateTeamPage>();
 
 
             // Сервисы регистрации ( сервисы создаются с помощью паттерны "Одиночка" по умолчанию)

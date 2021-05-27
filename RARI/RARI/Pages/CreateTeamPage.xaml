@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             NavigationPage.HasNavigationBar="False"
+             x:Class="RARI.Pages.CreateTeamPage">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#FFFFFF">
+            <!-- Place new controls here -->
+            <ScrollView Margin="0,0,0,0" BackgroundColor="#FFFFFF">
+                <StackLayout>
+                    <Frame 
+                       HeightRequest="150" 
+                       WidthRequest="150" 
+                       BackgroundColor="White"
+                       HasShadow="True" 
+                       Padding="0" 
+                       Margin="10,10,10,5" 
+                       CornerRadius="100"
+                       HorizontalOptions="CenterAndExpand">
+                        <Image   
+                           Source="https://media.discordapp.net/attachments/775427856301686814/847556635399553074/465417f7bb5110a9.png"
+                           Aspect="AspectFill"
+                           HeightRequest="350"/>
+                    </Frame>
+
+                    <Button   Text="Сменить аватар"
+                          BackgroundColor="#E9CAFF"
+                          WidthRequest="150"
+                          HeightRequest="40"
+                          Margin="120,0,120,10"
+                          FontFamily = "Lobster"
+                          TextColor="Black"
+                          FontSize="Small"
+                          CornerRadius="20"/>
+
+                    <Label    Text="Введите название команды:"  
+                          FontSize="Small" 
+                          Margin="10,0,0,0"/>
+                    <StackLayout>
+                        <Frame
+                          WidthRequest="330"
+                          HorizontalOptions="StartAndExpand"
+                          CornerRadius="10"
+                          Padding="10,0"
+                          BackgroundColor="#E9CAFF"
+                          Margin="20,0,20,5">
+                            <Entry 
+                               HorizontalOptions="Fill" 
+                               VerticalOptions="Fill" 
+                               BackgroundColor="#E9CAFF" 
+                               FontSize="Small"
+                               ClearButtonVisibility="WhileEditing"/>
+                        </Frame>
+                    </StackLayout>
+                    <Label    Text="Введите языки программирования:"  
+                          FontSize="Small" 
+                          Margin="10,0,0,0"/>
+                    <Frame
+                          WidthRequest="350"
+                          HorizontalOptions="StartAndExpand"
+                          CornerRadius="10"
+                          Padding="0,0"
+                          BackgroundColor="#E9CAFF"
+                          Margin="20,0,20,5">
+                        <Grid       WidthRequest="350"
+                                HorizontalOptions="Center"
+                                BackgroundColor="#E9CAFF" 
+                                Padding="0,5,0,0">
+
+                            <StackLayout>
+                                <CheckBox x:Name="Langs1"/>
+                                <CheckBox x:Name="Langs2"/>
+                                <CheckBox x:Name="Langs3"/>
+                                <CheckBox x:Name="Langs4"/>
+                            </StackLayout>
+                            <StackLayout Grid.Column="0" 
+                                        Margin="40,0,0,0" >
+                                <Label Text="C#" FontSize="Medium" Margin="0,2,0,0"/>
+                                <Label Text="C/C++" FontSize="Medium" Margin="0,8,0,0"/>
+                                <Label Text="Java" FontSize="Medium" Margin="0,8,0,0"/>
+                                <Label Text="PHP" FontSize="Medium" Margin="0,8,0,0"/>
+                            </StackLayout>
+                        </Grid>
+                    </Frame>
+                    <Label     Text="Название проекта:"  
+                           FontSize="Small" 
+                           Margin="10,0,0,0"/>
+                    <Frame
+                           WidthRequest="330"
+                           HorizontalOptions="StartAndExpand"
+                           CornerRadius="10"
+                           Padding="10,0"
+                           BackgroundColor="#E9CAFF"
+                           Margin="20,0,20,5">
+                        <Entry 
+                           HorizontalOptions="Fill" 
+                           VerticalOptions="Fill" 
+                           BackgroundColor="#E9CAFF" 
+                           FontSize="Small"
+                           ClearButtonVisibility="WhileEditing">
+                        </Entry>
+                    </Frame>
+                    <Label     Text="Описание команды:"  
+                           FontSize="Small" 
+                           Margin="10,0,0,0"/>
+
+                    <Frame     BackgroundColor="#E9CAFF"
+                           Margin="20,0,40,20"
+                           CornerRadius="10" 
+                           Padding="10,5">
+                        <Editor  
+                           Text="Команда молодых разработчиков и перспективных разработчиков ищет ответственного и трудолюбивого человека для разработки проекта по дисциплине ''ТРПО''." 
+                           AutoSize="TextChanges" 
+                           BackgroundColor="#E9CAFF">
+                        </Editor>
+                    </Frame>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

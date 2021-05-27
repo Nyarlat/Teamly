@@ -26,6 +26,7 @@ namespace RARI.PageModels
             GoToTeam = new Command(GoToTeamAction);
             GoToPerson = new Command(GoToPersonAction);
             GoToChat = new Command(GoToChatAction);
+            GoToCreateTeam = new Command(GoToCreateTeamAction);
         }
 
         private ICommand _goToSearch;
@@ -86,6 +87,18 @@ namespace RARI.PageModels
         private async void GoToChatAction(object obj)
         {
             await _navigationService.NavigateToAsync<ChatPageModel>();
+        }
+
+        private ICommand _goToCreateTeam;
+        public ICommand GoToCreateTeam
+        {
+            get => _goToCreateTeam;
+            set => SetProperty(ref _goToCreateTeam, value);
+        }
+
+        private async void GoToCreateTeamAction(object obj)
+        {
+            await _navigationService.NavigateToAsync<CreateTeamPageModel>();
         }
     }
 }

@@ -12,5 +12,6 @@ namespace RARI
         public string Nick { get; set; }
         public string City { get; set; }      
         public string Langs { get; set; }
+        public string Description { get; set; }
     }
 }

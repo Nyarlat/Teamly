@@ -42,7 +42,10 @@
             
             <Button WidthRequest="100"
                     Command="{Binding GoToChat}"/>
-            
+
+            <Button WidthRequest="100"
+                    Command="{Binding GoToCreateTeam}"/>
+
             <ListView ItemsSource="{Binding ToChatDetails}"
                                   Margin="0,55,0,0"
                                   HeightRequest="350"
